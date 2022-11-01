@@ -8,6 +8,11 @@ calendario = Flask(__name__)
 calendario.secret_key = "abc"  
 logado = False
 
+
+
+
+
+
 @calendario.route("/")
 def rota_root():
     return render_template("base.html")
