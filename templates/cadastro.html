@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
-    <title class="titulo">Cadastro</title>
-    <link rel="stylesheet" href="/static/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
-    
+   
     <body>
     
     {% with messages = get_flashed_messages() %}  
@@ -17,13 +20,18 @@
         {% endif %}  
      {% endwith %}
     
+     <nav id="navbar">
+        <form class="navform" action="/login"><input class="navinput" type="submit" value="login"></form>
+        <form class="navform" action="/cadastro"><input class="navinput" type="submit" value="Cadastre-se"></form>
+     </nav>
+
     <h1 font-family="Arial">Faça seu cadastro</h1>
     
     <form action="/cadastro" method="post">
     
-    <p><input class="caixinha" type="text" name = "nome" placeholder="Nome" ></p>
-    <p><input class="caixinha" type="text" name = "dre" placeholder="DRE"></p>
-    <p><input class="caixinha" type="password" name = "senha" placeholder="senha"></p><br>
+    <p><input class="caixinha" type="text" name = "nome" placeholder="Nome" required></p>
+    <p><input class="caixinha" type="text" name = "dre" placeholder="DRE" required></p>
+    <p><input class="caixinha" type="password" name = "senha" placeholder="senha" required></p><br>
     <p><input class="botao" type="submit"></p>
     
     </form>

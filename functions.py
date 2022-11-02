@@ -28,8 +28,7 @@ def checa_existe(dre) :
         cadastro = cursor.execute("SELECT * FROM contas where dre = '"+dre+"'").fetchall()
         if len(cadastro)>0 :
                 return True
-        else:
-                
+        else:  
                 return False       
 
 #checa se ja existe e se nao existir ele cria
@@ -65,19 +64,16 @@ def autentica_senha(senha):
     else:
         return False
 
-def autentica_tudo(dre,senha):
+
+def autentica_tudo(dre, senha):
     db = sqlite3.connect('database.sqlite')
     cursor = db.cursor()
-    acha_coisa = cursor.execute("SELECT * FROM contas where senha = '"+senha+"'").fetchall()
-    if len(acha_coisa) >0:
-        senha_valida = True
-    acha_coisa = cursor.execute("SELECT * FROM contas where dre = '"+dre+"'").fetchall()
+    acha_coisa = cursor.execute("SELECT * FROM contas where senha = '"+senha+"' and dre = '"+dre+"'").fetchall()
     if len(acha_coisa)>0:
-        dre_valido = True
-    if dre_valido == True and senha_valida == True:
         return True
     else:
         return False
+
 
 def autenticado():
     global logado 

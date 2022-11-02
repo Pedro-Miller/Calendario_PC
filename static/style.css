@@ -1,3 +1,11 @@
+
+:root{
+    --ciano : #2DCDEA;
+    --amarelo: #ffff00;
+    --magenta: #E01D89;
+}
+
+
 h1{
     margin: 40px;
     font-family: "Verdana";
@@ -8,16 +16,78 @@ h1{
 }
 
 *{
-    background-color: rgb(1, 1, 1);
+    background-color: #2DCDEA;
     font-family: "Verdana", "Arial";
     color: whitesmoke;
 }
 
-p{
-    font-family: "Montserrat";
-    text-align: center;
-    font-weight: normal;
 
+
+
+nav#navbar{
+    padding: 15px;
+    position: fixed;
+    background-color: #e0e032;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+p{
+    height: fit-content;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    width: max-content;
+    
+}
+
+.navform{
+    text-decoration: none;
+    height: max-content;
+    width: auto;
+    align-items: center;
+    margin: 5px;
+    font-family: "Arial", sans-serif;
+    font-size:40px;
+    display: flex;
+    background-color: #E01D89;
+    border-radius: 20px;
+    border-color: rgb(255, 255, 255);
+    border-width: 3px;
+    border-style: solid;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+
+}
+
+.navinput{
+    text-decoration: none;
+    height: max-content;
+    width: auto;
+    align-items: center;
+    margin: 0px;
+    font-family: "Arial", sans-serif;
+    font-size:40px;
+    display: flex;
+    background-color: #E01D89;
+    border-radius: 20px;
+    border-color: #E01D89;
+    border-width: 3px;
+    border-style: solid;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+
+}
+
+body{
+    top: 20px;
 }
 
 .botao{

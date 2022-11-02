@@ -1,9 +1,16 @@
 
-
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Login</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login</title>
+      <link rel="stylesheet" href="/static/style.css">
 </head>
+
+</html>
+
 
 <body>
     {% with messages = get_flashed_messages() %}  
@@ -14,12 +21,17 @@
           {% endfor %}  
     {% endif %}  
  {% endwith %}
+
 <h1>Faça seu login</h1>
 
+<nav id="navbar">
+   <form class="navform" action="/login"><input class="navinput" type="submit" value="login" required></form>
+   <form class="navform" action="/cadastro"><input class="navinput" type="submit" value="Cadastre-se" required></form>
+</nav>
 <form action="/login" method="post">
 
-DRE: <input type="text" name = "dre" ><br>
-Senha:<input type="password" name = "senha"><br>
+DRE: <input type="text" name = "dre" required><br>
+Senha:<input type="password" name = "senha" required><br>
 <input type="submit">
 
 </form>
